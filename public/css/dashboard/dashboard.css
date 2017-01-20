@@ -1,0 +1,11 @@
+.footer {
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.dashboard-title {
+    margin-left: 15px;
+}
