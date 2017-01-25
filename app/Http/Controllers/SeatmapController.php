@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SeatmapController extends Controller
 {
@@ -23,7 +24,8 @@ class SeatmapController extends Controller
      */
     public function create()
     {
-        return view('dashboard.seatmap.create');
+        $json = Storage::get('venue/venue.json');
+        return view('dashboard.seatmap.create', compact('json'));
     }
 
     /**
@@ -80,5 +82,10 @@ class SeatmapController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function loadFile($path)
+    {
+
     }
 }
